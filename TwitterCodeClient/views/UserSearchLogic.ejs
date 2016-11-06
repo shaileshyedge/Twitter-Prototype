@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:http="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/style.css"/>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/stylesheets/styleHashPage.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+</head>
+
+<body ng-app = "UserSearch" ng-controller = "UserSearchCntr" style="background-color: #f5f8fa">
+<% include CommonStrip.ejs %>
+<div class="row" align="center">
+    <div id = "hash" class="col-md-12" style="background-color: #0084B4">
+        <h1 style="color: white"></h1>
+    </div>
+</div>
+<div ng-repeat = "value in data" >
+    <div class = "userInfo"><span id ="name">{{ value.fname}} {{value.lname }}</span><span id = "handle"> @{{value.twitter_handle}}</span>
+        <div id="button"> <button type= "button" ng-click = "follow(value.twitter_handle)" ng-disabled = "visible">Follow</button> </div>
+    </div>
+</div>
+<script src = "javascripts/UserSearchCntr.js"></script>
+</body>
+</html>

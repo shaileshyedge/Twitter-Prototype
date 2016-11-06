@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:http="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/style.css"/>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/stylesheets/styleHomePage.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+</head>
+
+<body ng-app = "homePageApp"  style="background-color: #f5f8fa">
+
+<div ng-controller = "searchController">
+
+    <% include CommonStrip.ejs %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid" id = "welcome" ng-controller = "profile">
+    <div class="col-sm-3" id="panelsize">
+        <div class="panel panel-primary" id="toppanel">
+            <div id="panelHeading" class="panel-heading">
+            </div>
+            <div id="" class="panel-body">
+
+                <a href="ProfilePage"> {{result.First_Name }}&nbsp{{ result.Last_Name}}</a>
+
+
+                <div class="container" id = "badges">
+                    <a >Tweets <span> <b>{{result.tweet_count}} </b></span></a>
+                    <a >Following <span><b>{{ result.following_count }}</b></span></a>
+                    <a >Follower <span><b>{{ result.followers_count}}</b></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div  ng-controller = "HomePageController">
+    <div class="container-fluid" id="tweetfield">
+        <div class="" id="txt">
+            <form>
+                <textarea class="" rows="1" cols="50" ng-model="tweetValue" maxlength="140"  onfocus="this.rows=5;" style="resize:none;" onblur="this.rows=1;" id="txta"></textarea>
+                <button type="button" value="Tweet" id="tweet" ng-click = "insertTweet()" >Tweet</button>
+
+            </form>
+        </div>
+    </div>
+    <div ng-repeat = "value in data"  >
+       <div class = "userInfo"><span id ="name">{{ value.fname}} {{value.lname }}</span><span id = "handle"> @{{value.twitter_handle}}</span>
+       <div id="comments"> {{ value.tweet_text}} </div>
+           <div id = "retweetButton" ng-show  = "value.twitter_handle != value.user_handle"><a ng-click = "retweet(value.tweet_id)"><img src="https://cdn4.iconfinder.com/data/icons/vector_social_media_icons/32px/retweet.png" /></a></div>
+
+       </div>
+    </div>
+</div>
+<script src = "javascripts/HomePageController.js"></script>
+</body>
+</html>

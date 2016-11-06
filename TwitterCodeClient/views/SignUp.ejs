@@ -1,0 +1,59 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='/stylesheets/styleSignUp.css'/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body ng-app = "signUp" ng-controller = "signUpCntr">
+    <div class="container-fluid">
+    </div>
+    <div id ="div"></div>
+    <div id = "divSignUp" class = "col-sm-6">
+        <h1 class=" header">Join Twitter Today.</h1>
+        <form >
+            <div class="form-group col-sm-7">
+                <input type="text" class="form-control" id="fname" placeholder="First Name" ng-model = "fname" required>
+            </div>
+            <div class="form-group col-sm-7">
+                <input type="text" class="form-control" id="lname" placeholder="Last Name" ng-model = "lname" required>
+            </div>
+
+            <div class="form-group col-sm-7 ">
+                <input type="email" class="form-control" id="email" placeholder="Email Address" ng-model = "email" required>
+            </div>
+            <div class="form-group col-sm-7 ">
+                <input type="password" class="form-control" id="password" placeholder="Password" ng-model = "password" required>
+            </div>
+
+
+
+            <div class="form-group col-sm-7 ">
+                <input  type="text" id="date" class="form-control" ng-model = "date" placeholder="Birth Date" required />
+            </div>
+            <div class="form-group col-sm-7 ">
+                <input type="text" class="form-control" id="handle" placeholder="Twitter Handler" ng-model = "handle" required>
+            </div>
+
+            <div class="form-group col-sm-7 ">
+                <input type="text" class="form-control" id="location" placeholder="Location" ng-model = "location" required>
+            </div>
+            <div class="form-group col-sm-7">
+                <button type="submit" class="buttonLogin btn" ng-click = "clickSignUp()">Sign Up</button>
+            </div>
+
+        </form>
+    </div>
+    <div  class="form-group" id = "credentials" ng-hide = "credentials">Twitter Handle Already Exists
+    </div>
+    <div  class="form-group" id = "emailCredentials" ng-hide = "emailCredentials">Email Already Exists
+    </div>
+    <script src = "./javascripts/SignUpCntr.js"></script>
+</body>
+</html>

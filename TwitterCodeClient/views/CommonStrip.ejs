@@ -1,0 +1,59 @@
+<html>
+<head>
+    <link rel='stylesheet' href='/stylesheets/styleCommonstrip.css' />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body >
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: #fff">
+    <div class="container-fluid">
+
+        <!--Menu items -->
+        <div>
+
+            <ul class="nav navbar-nav" id="bor">
+                <li class="active" ><a href="#"id="Home"><img src="http://tracigregory.com/wp-content/uploads/2011/12/new-new-twitter-home.png" id="himg" class="nav navbar-nav">
+                        <h4 class ="nav navbar-nav" id="htext" >Home</h4></a> </li>
+                <!-- <li><a href="www.google.com">h</a> </li>-->
+            </ul>
+        </div>
+
+        <div class="col-sm-3 col-md-2 pull-center">
+            <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" width = "25" height="30" id="icon" class="img-responsive" >
+        </div>
+
+
+
+
+
+        <!-- TWEET BUTTON (GLOBAL) -->
+        <div class="col-md1 pull right" >
+
+            <div class="pull-right">
+                <form action = '/logout' method="post">
+                <button id="globaltweet">Log Out</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-3 pull-right">
+            <div class="pull-right">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" ng-model="search" id="srch-term">
+                        <div class="input-group-btn">
+                            <button id="btn" class="btn btn-link" type="submit" ng-click = "searchHash()"><i class="glyphicon glyphicon-search"></i></button>
+                        </div></div>
+
+                </form>
+            </div>
+
+        </div>
+        </div>
+</nav>
+
+</body>
+</html>

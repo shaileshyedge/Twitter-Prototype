@@ -1,0 +1,38 @@
+#hash
+{
+    margin-top: 56px;
+}
+
+.userInfo{
+    background-color: white;
+    margin-right: 550px;
+    margin-left: 316px;
+    padding-top: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 538px;
+    margin-top: 10px;
+    display: block;
+    height: 66px;
+    border-color: #e1e8ed;
+    margin-bottom: -9px;
+    line-height: 52px;
+    word-wrap: break-word;
+}
+
+#name{
+    font-weight: bold;
+    color: #292f33;
+}
+#handle{
+    color: #b1bbc3;
+}
+#comments{
+    margin-top: -33px;
+}
+#button
+{
+    margin-left: 400px;
+    margin-top: -45px;
+    width : 20px;
+}

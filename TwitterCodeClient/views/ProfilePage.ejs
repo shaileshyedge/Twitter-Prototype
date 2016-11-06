@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel='stylesheet' href='/stylesheets/styleprofile.css' />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+</head>
+<body ng-app = 'profileapp' ng-controller = 'profilecntr'>
+<% include CommonStrip.ejs %>
+<div class = "backgroundImage">
+</div>
+<!--
+<div class="navBarPF" >
+    <ul>
+        <li><a><span class="letters">ABOUT ME</span><div></div></a></li>
+        <li><a><span class="letters">following</span><div></div></a></li>
+        <li><a><span class="letters">followers</span><div></div></a></li>
+    </ul>
+
+</div>
+-->
+<div>
+    <b style="margin-left: 120px">ABOUT ME</b>
+    <b style="margin-left: 350px">FOLLOWING</b>
+    <b style="margin-left: 300px">FOLLOWERS</b>
+</div>
+<div id="browser">
+    <a id="prof">{{ profile.fname}} &nbsp {{profile.lname}}</a>
+    <a id = "prof"> @{{profile.twitter_handle }}</a><br>
+    <a id = "prof">{{profile.birth_date }}</a>
+    <a id = "prof">{{profile.email_id }}</a>
+    <a id = "prof">{{profile.location }}</a>
+</div>
+<div id = "browser1" >
+    <div ng-repeat = "value in follow" >
+    <div id="following"  class="panel panel-default" >@{{value.twitter_handle }} </div>
+        </div>
+</div>
+<div id = "browser2" >
+    <div ng-repeat = "value in follower">
+        <div id="following" class="panel panel-default">@{{value.twitter_handle }} </div>
+    </div>
+</div>
+
+
+<script src = "javascripts/ProfileCntr.js"></script>
+</body>
+</html>

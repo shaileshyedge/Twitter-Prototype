@@ -1,0 +1,55 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+    <script src="./jquery/jqueryHome.js"></script>
+    <link rel='stylesheet' href='/stylesheets/styleHome.css' />
+
+</head>
+
+<body ng-app = "homeLoginPage">
+
+<div class = "container-fluid" >
+    <div id = "image" style="background-color: blue">
+        <img id="icon" src="../images/twitter_icon.png" style="width :100px; height: 100px" />
+        </div>
+        <div>
+
+            <form action="/signUp" method="get">
+                <button type="submit" class = "btn btn-lg pull-right" id = "button2" >Sign Up</button>
+            </form>
+
+        </div>
+        <div>
+            <h2 class = "h2" align="center">See what's happening right now.</h2>
+            <p class = "p" align = "center">Find community, conversation and inspiration about things you love.</p>
+        </div>
+    </div>
+</div>
+
+
+<div id = "logInTable" class="col-sm-3 pull-right" ng-controller = "controlhome">
+    <div id="div">
+        <h3 class="whiteText">Log in to your Account</h3>
+        <p id = "cred" ng-hide = "cred">Invalid credentials</p>
+        <form class = "pull-right">
+            <div class="form-group pull-left">
+                <input type="text" class="form-control" id="name" placeholder="Name" ng-model ="name" required>
+            </div>
+            <div class="form-group pull-left">
+                <input type="password" class="form-control" id="password" placeholder="Password"  ng-model = "password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="buttonLogin btn" ng-click = "clickLogin();">Log in</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src = "javascripts/ClientCntr.js"></script>
+</body>
+</html>
